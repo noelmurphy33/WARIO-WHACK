@@ -60,6 +60,31 @@ I used colors on the site to complement the mario and wario characters the color
 #### Typography
 I decided to use [MODAK](https://fonts.google.com/specimen/Modak) font for the site as i felt it created a gameing vibe on the site and matched the style of the gameplay.  
 ### Wireframes
+The wireframes were created using [Figma](https://www.figma.com)
+#### Homepage intro
+- [HOME INTRO DESKTOP](https://github.com/noelmurphy33/WARIO-WHACK/blob/master/assets/wireframes/homeintro.png)
+- [HOME INTRO MOBILE](https://github.com/noelmurphy33/WARIO-WHACK/blob/master/assets/wireframes/homeintromobile.png)
+- [HOME INTRO TABLET](https://github.com/noelmurphy33/WARIO-WHACK/blob/master/assets/wireframes/homeintrotablet.png)
+#### Homepage game instructions
+- [GAME INSTRUCTIONS DESKTOP](https://github.com/noelmurphy33/WARIO-WHACK/blob/master/assets/wireframes/howtoplay.png)
+- [GAME INSTRUCTIONS MOBILE](https://github.com/noelmurphy33/WARIO-WHACK/blob/master/assets/wireframes/howtoplaymobile.png)
+- [GAME INSTRUCTIONS TABLET](https://github.com/noelmurphy33/WARIO-WHACK/blob/master/assets/wireframes/howtoplaytablet.png)
+#### Scoreboard
+- [SCOREBOARD DESKTOP](https://github.com/noelmurphy33/WARIO-WHACK/blob/master/assets/wireframes/scoreboard.png)
+- [SCOREBOARD MOBILE](https://github.com/noelmurphy33/WARIO-WHACK/blob/master/assets/wireframes/scoreboardmobile.png)
+- [SCOREBOARD TABLET](https://github.com/noelmurphy33/WARIO-WHACK/blob/master/assets/wireframes/scoreboardtablet.png)
+#### Contact form
+- [CONTACT FORM DESKTOP](https://github.com/noelmurphy33/WARIO-WHACK/blob/master/assets/wireframes/contact.png)
+- [CONTACT FORM MOBILE](https://github.com/noelmurphy33/WARIO-WHACK/blob/master/assets/wireframes/contactmobile.png)
+- [CONTACT FORM TABLET](https://github.com/noelmurphy33/WARIO-WHACK/blob/master/assets/wireframes/contacttablet.png)
+#### Gameplay 
+- [GAMEPLAY DESKTOP](https://github.com/noelmurphy33/WARIO-WHACK/blob/master/assets/wireframes/gameplay.png)
+- [GAMEPLAY MOBILE](https://github.com/noelmurphy33/WARIO-WHACK/blob/master/assets/wireframes/gameplaymobile.png)
+- [GAMEPLAY TABLET](https://github.com/noelmurphy33/WARIO-WHACK/blob/master/assets/wireframes/gameplaytablet.png)
+#### Gameplay finished 
+- [GAMEPLAY FINISHED DESKTOP](https://github.com/noelmurphy33/WARIO-WHACK/blob/master/assets/wireframes/gameplayfinishcard.png)
+- [GAMEPLAY FINISHED MOBILE](https://github.com/noelmurphy33/WARIO-WHACK/blob/master/assets/wireframes/gameplayfinishcardmobile.png)
+- [GAMEPLAY FINISHED TABLET](https://github.com/noelmurphy33/WARIO-WHACK/blob/master/assets/wireframes/gameplayfinishcardtablet.png)
 ### Design changes
 ## Features
 ### Existing Features
