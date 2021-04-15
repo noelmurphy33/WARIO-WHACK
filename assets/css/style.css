@@ -9,6 +9,9 @@
 .bgfont{
     font-size: 30px;
 }
+.mdfont{
+    font-size: 25px;
+}
 .smfont{
     font-size: 19px;
 }
@@ -42,9 +45,10 @@
     margin-top: 30px;
     font-size: 90px;
 }
-
+/*------------------------mainpage mario pic------------------*/
 .mainpicture{
     background: url(../images/mainpagemario.png) center center no-repeat;
     background-size: contain;
     height: 50vh;
 }
+/*------------------------intro------------------*/
