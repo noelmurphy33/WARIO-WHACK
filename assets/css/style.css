@@ -52,3 +52,15 @@
     height: 50vh;
 }
 /*------------------------intro------------------*/
+#intro{
+    background-color: #fcf7f8;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin-top: 15px;
+}
+#intro p{
+    padding: 10px;
+}
+#mainscoreboard{display: none;}
+#howtoplay{display: none;}
+#contact{display: none;}
