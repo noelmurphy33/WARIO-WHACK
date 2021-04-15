@@ -12,3 +12,8 @@
 .smfont{
     font-size: 19px;
 }
+.fas.fa-bars{
+    font-size: 28px;
+    color: #FBD000;
+    -webkit-text-stroke: 1px black;
+}
