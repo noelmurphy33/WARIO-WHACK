@@ -1,10 +1,11 @@
+/*------------------------FONT STYLES COLORS------------------*/
 .yellowfont{
     color: #FBD000;
     font-family:'Modak', cursive;
     -webkit-text-stroke: 1px black;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.658);
 }
-
+/*------------------------FONT SIZES------------------*/
 .bgfont{
     font-size: 30px;
 }
@@ -12,12 +13,13 @@
 .smfont{
     font-size: 19px;
 }
+/*------------------------NAV ICON STYLE------------------*/
 .fas.fa-bars{
     font-size: 28px;
     color: #FBD000;
     -webkit-text-stroke: 1px black;
 }
-
+/*------------------------BACKGROUND COLORS------------------*/
 .bkgdblue{
     background: color #049cd8;
 }
