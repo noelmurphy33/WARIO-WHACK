@@ -4,3 +4,11 @@
     -webkit-text-stroke: 1px black;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.658);
 }
+
+.bgfont{
+    font-size: 30px;
+}
+
+.smfont{
+    font-size: 19px;
+}
