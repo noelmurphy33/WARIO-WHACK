@@ -1,0 +1,6 @@
+.yellowfont{
+    color: #FBD000;
+    font-family:'Modak', cursive;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.658);
+}
