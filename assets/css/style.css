@@ -37,3 +37,8 @@
 .bkgdorg{
     background-color: #eb5e32;
 }
+/*------------------------BIG TITLE------------------*/
+#bigtitle{
+    margin-top: 30px;
+    font-size: 90px;
+}
