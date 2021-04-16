@@ -64,3 +64,12 @@
 #mainscoreboard{display: none;}
 #howtoplay{display: none;}
 #contact{display: none;}
+
+/*------------------------playgamebtn------------------*/
+#playgamebtn{
+    background-color: #fcf7f8;
+    border: 1px solid black;
+    margin: 20px;
+    border-radius: 50%;
+    font-size: 35px;
+}
