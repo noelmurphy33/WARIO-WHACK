@@ -45,6 +45,12 @@
     margin-top: 30px;
     font-size: 90px;
 }
+
+@media screen and (max-width: 650px){
+    #bigtitle{
+        font-size: 40px;
+    }
+}
 /*------------------------mainpage mario pic------------------*/
 .mainpicture{
     background: url(../images/mainpagemario.png) center center no-repeat;
