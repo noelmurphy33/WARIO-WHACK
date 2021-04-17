@@ -32,6 +32,9 @@
 .navbar-brand:hover{
     color: #049cd8;
 }
+.active{
+    color: #049cd8;
+}
 /*------------------------BACKGROUND COLORS------------------*/
 .bkgdblue{
     background-color:#049cd8;
