@@ -16,3 +16,12 @@ $("#scoreboardbtn").click(function () {
     $("#mainscoreboard").show("slow");
      $(this).addClass("active");
 });
+//function to toggle to contact
+$("#contactbtn").click(function () {
+    $("#intro").hide("slow");
+    $(".nav-link").removeClass("active");
+    $("#howtoplay").hide("slow");
+    $("#mainscoreboard").hide("slow");
+    $("#contact").show("slow");
+     $(this).addClass("active");
+});
