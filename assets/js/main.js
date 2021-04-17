@@ -25,3 +25,12 @@ $("#contactbtn").click(function () {
     $("#contact").show("slow");
      $(this).addClass("active");
 });
+//function to toggle to intro
+$("#introbtn").click(function () {
+    $("#contact").hide("slow");
+    $(".nav-link").removeClass("active");
+    $("#howtoplay").hide("slow");
+    $("#mainscoreboard").hide("slow");
+    $("#intro").show("slow");
+     $(this).addClass("active");
+});
