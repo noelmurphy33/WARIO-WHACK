@@ -7,3 +7,12 @@ $("#howtobtn").click(function () {
     $("#howtoplay").show("slow");
      $(this).addClass("active");
 });
+//function to toggle to scoreboard div
+$("#scoreboardbtn").click(function () {
+    $("#intro").hide("slow");
+    $(".nav-link").removeClass("active");
+    $("#howtoplay").hide("slow");
+    $("#contact").hide("slow");
+    $("#mainscoreboard").show("slow");
+     $(this).addClass("active");
+});
