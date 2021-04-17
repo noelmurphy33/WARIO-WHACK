@@ -95,6 +95,18 @@
     margin-top: 15px;
 }
 
+#contactsubmitbtn{
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+#contactsubmitbtn:hover{
+    font-size: 28px;
+    color: #eb5e32;
+}
+
 /*------------------------playgamebtn------------------*/
 #playgamebtn{
     background-color: #fcf7f8;
