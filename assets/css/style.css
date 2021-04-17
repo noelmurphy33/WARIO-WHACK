@@ -70,9 +70,30 @@
 #intro p{
     padding: 10px;
 }
-#mainscoreboard{display: none;}
-#howtoplay{display: none;}
-#contact{display: none;}
+/*------------------------scoreboard------------------*/
+#mainscoreboard{
+    display: none;
+    background-color: #fcf7f8;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin-top: 15px;
+}
+/*------------------------how to play ------------------*/
+#howtoplay{
+    display: none;
+    background-color: #fcf7f8;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin-top: 15px;
+}
+/*------------------------contact------------------*/
+#contact{
+    display: none;
+    background-color: #fcf7f8;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin-top: 15px;
+}
 
 /*------------------------playgamebtn------------------*/
 #playgamebtn{
