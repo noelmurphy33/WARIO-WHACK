@@ -120,3 +120,16 @@
     font-size: 45px;
     color: #eb5e32;
 }
+
+.footericon{
+    font-size: 28px;
+    text-align: center;
+}
+.footericon i{
+    color: #FBD000;
+    margin: 5px 20px 20px 20px;
+}
+.footericon i:hover{
+    color: #049cd8;
+    font-size: 30px;
+}
