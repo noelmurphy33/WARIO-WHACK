@@ -152,3 +152,21 @@
     background: url(../images/gamebackground.jpg) no-repeat  center;
     background-size: cover;
 }
+.pipe {
+    flex: 1 0 33.33%;
+    position: relative;
+    overflow: hidden;
+  }
+  /*------------------------credit for after puedo element http://frankslaboratory.co.uk/------------------*/
+  .pipe:after {
+    display: block;
+    content: "";
+    background: url(../images/pipe1.png) center top no-repeat;
+    background-size: contain;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+  }
