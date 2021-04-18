@@ -142,3 +142,13 @@
     padding: 8px 8px;
     font-size: 20px;
 }
+
+.gameplay{
+    box-sizing: border-box;
+    height: 85vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    background: url(../images/gamebackground.jpg) no-repeat  center;
+    background-size: cover;
+}
