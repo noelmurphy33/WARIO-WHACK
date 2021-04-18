@@ -219,6 +219,7 @@
     background-size: 100%;
     left: 50%;
     transform: translate(-50%);
+    top: 100%;
 }
 
 .mario {
@@ -230,6 +231,7 @@
     background-size: contain;
     left: 50%;
     transform: translate(-50%);
+    top: 100%;
 }
 
 @media screen and (max-height: 400px) {
@@ -287,6 +289,7 @@
 
 /*------------------------game over div------------------*/
 .gameover {
+    display: none;
     position: absolute;
     z-index: 60;
     left: 50%;
