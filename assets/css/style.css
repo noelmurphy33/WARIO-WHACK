@@ -136,3 +136,9 @@
     color: #049cd8;
     font-size: 30px;
 }
+/*------------------------GAME STYLING------------------*/
+
+.gameconsole{
+    padding: 8px 8px;
+    font-size: 20px;
+}
