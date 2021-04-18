@@ -199,10 +199,27 @@
   .mario {
     height: 75px;
     width: 75px;
-    bottom: 75px;
+    bottom: 60px;
   }
   .pipe:after {
     width: 75px;
     height: 75px;
   }
 }
+@media screen and (min-height: 900px) {
+    .wario {
+      height: 150px;
+      width: 150px;
+      bottom: 150px;
+    }
+    .mario {
+      height: 150px;
+      width: 150px;
+      bottom: 150px;
+    }
+    .pipe:after {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
