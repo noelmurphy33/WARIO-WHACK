@@ -1,3 +1,4 @@
+$( document ).ready(function() {
 //function to toggle to how to play div
 $("#howtobtn").click(function () {
     $("#intro").hide("slow");
@@ -33,4 +34,17 @@ $("#introbtn").click(function () {
     $("#mainscoreboard").hide("slow");
     $("#intro").show("slow");
      $(this).addClass("active");
+});
+
+//gameplay 
+const pipes = document.querySelectorAll(".pipe");
+const wario = document.querySelectorAll(".wario");
+const mario = document.querySelectorAll(".mario");
+const startgame = document.querySelector(".startbtn")
+const displaytimeleft  = document.querySelector("#time")
+const displayscore  = document.querySelector("#score")
+
+
+
+
 });
