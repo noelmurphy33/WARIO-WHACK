@@ -170,3 +170,24 @@
     left: 50%;
     transform: translate(-50%);
   }
+
+  .wario {
+    background: url(../images/wario1.png) center bottom no-repeat;
+    position: absolute;
+    bottom: 150px;
+    width: 150px;
+    height: 150px;
+    background-size:100%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.mario{
+    background: url(../images/mario1.png) center bottom no-repeat;
+    position: absolute;
+    bottom: 150px;
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    left: 50%;
+    transform: translate(-50%);
+}
