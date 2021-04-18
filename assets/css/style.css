@@ -1,277 +1,333 @@
 /*------------------------FONT STYLES COLORS------------------*/
 .yellowfont {
-  color: #fbd000;
-  font-family: "Modak", cursive;
-  -webkit-text-stroke: 1px black;
-  text-shadow: 0px 4px 4px rgb(0, 0, 0);
+    color: #fbd000;
+    font-family: "Modak", cursive;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 0px 4px 4px rgb(0, 0, 0);
 }
+
 /*------------------------FONT SIZES------------------*/
 .bgfont {
-  font-size: 30px;
+    font-size: 30px;
 }
+
 .mdfont {
-  font-size: 25px;
-  font-weight: bold;
+    font-size: 25px;
+    font-weight: bold;
 }
+
 .smfont {
-  font-size: 20px;
+    font-size: 20px;
 }
+
 /*------------------------NAV ICON STYLE------------------*/
 .fas.fa-bars {
-  font-size: 28px;
-  color: #fbd000;
-  -webkit-text-stroke: 1px black;
+    font-size: 28px;
+    color: #fbd000;
+    -webkit-text-stroke: 1px black;
 }
+
 /*------------------------NAV BAR STYLE------------------*/
 .nav-item {
-  margin-left: 12px;
+    margin-left: 12px;
 }
+
 .nav-link:hover {
-  color: #049cd8;
-  font-size: 24px;
+    color: #049cd8;
+    font-size: 24px;
 }
+
 .navbar-brand:hover {
-  color: #049cd8;
+    color: #049cd8;
 }
+
 .active {
-  color: #049cd8;
+    color: #049cd8;
 }
+
 /*------------------------BACKGROUND COLORS------------------*/
 .bkgdblue {
-  background-color: #049cd8;
+    background-color: #049cd8;
 }
 
 .bkgdorg {
-  background-color: #eb5e32;
+    background-color: #eb5e32;
 }
+
 /*------------------------BIG TITLE------------------*/
 #bigtitle {
-  margin-top: 30px;
-  font-size: 90px;
+    margin-top: 30px;
+    font-size: 90px;
 }
 
 @media screen and (max-width: 650px) {
-  #bigtitle {
-    font-size: 40px;
-  }
+    #bigtitle {
+        font-size: 40px;
+    }
 }
+
 /*------------------------mainpage mario pic------------------*/
 .mainpicture {
-  background: url(../images/mainpagemario.png) center center no-repeat;
-  background-size: contain;
-  height: 50vh;
+    background: url(../images/mainpagemario.png) center center no-repeat;
+    background-size: contain;
+    height: 50vh;
 }
+
 /*------------------------intro------------------*/
 #intro {
-  background-color: #fcf7f8;
-  border: 1px solid black;
-  border-radius: 5%;
-  margin-top: 15px;
+    background-color: #fcf7f8;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin-top: 15px;
 }
+
 #intro p {
-  padding: 10px;
+    padding: 10px;
 }
+
 /*------------------------scoreboard------------------*/
 #mainscoreboard {
-  display: none;
-  background-color: #fcf7f8;
-  border: 1px solid black;
-  border-radius: 5%;
-  margin-top: 15px;
+    display: none;
+    background-color: #fcf7f8;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin-top: 15px;
 }
+
 /*------------------------how to play ------------------*/
 #howtoplay {
-  display: none;
-  background-color: #fcf7f8;
-  border: 1px solid black;
-  border-radius: 5%;
-  margin-top: 15px;
+    display: none;
+    background-color: #fcf7f8;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin-top: 15px;
 }
+
 /*------------------------contact------------------*/
 #contact {
-  display: none;
-  background-color: #fcf7f8;
-  border: 1px solid black;
-  border-radius: 5%;
-  margin-top: 15px;
+    display: none;
+    background-color: #fcf7f8;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin-top: 15px;
 }
 
 #contactsubmitbtn {
-  border: 2px solid black;
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-  background-color: white;
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background-color: white;
 }
+
 #contactsubmitbtn:hover {
-  font-size: 28px;
-  color: #eb5e32;
+    font-size: 28px;
+    color: #eb5e32;
 }
 
 /*------------------------playgamebtn------------------*/
 #playgamebtn {
-  background-color: #fcf7f8;
-  border: 1px solid black;
-  margin: 20px;
-  border-radius: 50%;
-  font-size: 35px;
+    background-color: #fcf7f8;
+    border: 1px solid black;
+    margin: 20px;
+    border-radius: 50%;
+    font-size: 35px;
 }
+
 #playgamebtn:hover {
-  font-size: 45px;
-  color: #eb5e32;
+    font-size: 45px;
+    color: #eb5e32;
 }
+
 .playgame {
-  height: 30vh;
+    height: 30vh;
 }
+
 /*------------------------Footersection------------------*/
 .footericon {
-  font-size: 28px;
-  text-align: center;
+    font-size: 28px;
+    text-align: center;
 }
+
 .footericon i {
-  color: #fbd000;
-  margin: 5px 20px 20px 20px;
+    color: #fbd000;
+    margin: 5px 20px 20px 20px;
 }
+
 .footericon i:hover {
-  color: #049cd8;
-  font-size: 30px;
+    color: #049cd8;
+    font-size: 30px;
 }
+
 /*------------------------GAME STYLING------------------*/
 
 .gameconsole {
-  padding: 8px 8px;
-  font-size: 20px;
+    padding: 8px 8px;
+    font-size: 20px;
 }
+
 @media screen and (min-width: 600px) {
-    .gameconsole{
+    .gameconsole {
         font-size: 30px;
     }
 }
 
 @media screen and (min-width: 900px) {
-    .gameconsole{
+    .gameconsole {
         font-size: 40px;
     }
 }
+
 /*------------------------GAME play STYLING------------------*/
 
 .gameplay {
-  box-sizing: border-box;
-  height: 85vh;
-  width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
-  background: url(../images/gamebackground.jpg) no-repeat center;
-  background-size: cover;
+    box-sizing: border-box;
+    height: 85vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    background: url(../images/gamebackground.jpg) no-repeat center;
+    background-size: cover;
 }
+
 .pipe {
-  flex: 1 0 33.33%;
-  position: relative;
-  overflow: hidden;
+    flex: 1 0 33.33%;
+    position: relative;
+    overflow: hidden;
 }
+
 /*------------------------credit for after puedo element http://frankslaboratory.co.uk/------------------*/
 .pipe:after {
-  display: block;
-  content: "";
-  background: url(../images/pipe1.png) center top no-repeat;
-  background-size: contain;
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  transform: translate(-50%);
+    display: block;
+    content: "";
+    background: url(../images/pipe1.png) center top no-repeat;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
 }
+
 .wario {
-  background: url(../images/wario1.png) center bottom no-repeat;
-  position: absolute;
-  bottom: 100px;
-  width: 100px;
-  height: 100px;
-  background-size: 100%;
-  left: 50%;
-  transform: translate(-50%);
+    background: url(../images/wario1.png) center bottom no-repeat;
+    position: absolute;
+    bottom: 100px;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    left: 50%;
+    transform: translate(-50%);
 }
+
 .mario {
-  background: url(../images/mario1.png) center bottom no-repeat;
-  position: absolute;
-  bottom: 80px;
-  width: 100px;
-  height: 100px;
-  background-size: contain;
-  left: 50%;
-  transform: translate(-50%);
+    background: url(../images/mario1.png) center bottom no-repeat;
+    position: absolute;
+    bottom: 80px;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    left: 50%;
+    transform: translate(-50%);
 }
+
 @media screen and (max-height: 400px) {
-  .wario {
-    height: 75px;
-    width: 75px;
-    bottom: 75px;
-  }
-  .mario {
-    height: 75px;
-    width: 75px;
-    bottom: 60px;
-  }
-  .pipe:after {
-    width: 75px;
-    height: 75px;
-  }
+    .wario {
+        height: 75px;
+        width: 75px;
+        bottom: 75px;
+    }
+
+    .mario {
+        height: 75px;
+        width: 75px;
+        bottom: 60px;
+    }
+
+    .pipe:after {
+        width: 75px;
+        height: 75px;
+    }
 }
+
 @media screen and (min-height: 900px) {
-  .wario {
-    height: 150px;
-    width: 150px;
-    bottom: 150px;
-  }
-  .mario {
-    height: 150px;
-    width: 150px;
-    bottom: 150px;
-  }
-  .pipe:after {
-    width: 150px;
-    height: 150px;
-  }
+    .wario {
+        height: 150px;
+        width: 150px;
+        bottom: 150px;
+    }
+
+    .mario {
+        height: 150px;
+        width: 150px;
+        bottom: 150px;
+    }
+
+    .pipe:after {
+        width: 150px;
+        height: 150px;
+    }
 }
+
 /*------------------------START GAME BTN------------------*/
 .startbtn {
-  position: absolute;
-  z-index: 50;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border: 2px solid black;
-  background-color: #fcf7f8;
+    position: absolute;
+    z-index: 50;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    background-color: #fcf7f8;
 }
-.startbtn:hover{
+
+.startbtn:hover {
     color: #eb5e32;
 }
+
 /*------------------------game over div------------------*/
-.gameover{
-  position: absolute;
-  z-index: 60;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid black;
-  border-radius: 5%;
-  background-color: #fcf7f8;
-  padding: 20px;
-  min-width: 300px;
+.gameover {
+    position: absolute;
+    z-index: 60;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 5%;
+    background-color: #fcf7f8;
+    padding: 20px;
+    min-width: 300px;
 }
-#playernamesubmit{
+
+#playernamesubmit {
     border: 1px solid black;
     background-color: white;
     margin-left: 10px;
 }
-#exitbtn{
+
+#playernamesubmit:hover {
+    color: #eb5e32;
+    font-size: 22px;
+}
+
+#exitbtn {
     border: 1px solid black;
-    background-color:#eb5e32;
+    background-color: #eb5e32;
     margin-top: 20px;
 }
+#exitbtn:hover{
+    color: #049cd8;
+    font-size: 22px;
+    background-color: #fcf7f8;
+}
+
 #playagainbtn{
     border: 1px solid black;
     background-color: #049cd8;
     margin-top: 20px;
+}
+#playagainbtn:hover{
+    color: #eb5e32;
+    background-color: #fcf7f8;
+    font-size: 22px;
 }
