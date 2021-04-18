@@ -207,19 +207,31 @@
   }
 }
 @media screen and (min-height: 900px) {
-    .wario {
-      height: 150px;
-      width: 150px;
-      bottom: 150px;
-    }
-    .mario {
-      height: 150px;
-      width: 150px;
-      bottom: 150px;
-    }
-    .pipe:after {
-      width: 150px;
-      height: 150px;
-    }
+  .wario {
+    height: 150px;
+    width: 150px;
+    bottom: 150px;
   }
-  
+  .mario {
+    height: 150px;
+    width: 150px;
+    bottom: 150px;
+  }
+  .pipe:after {
+    width: 150px;
+    height: 150px;
+  }
+}
+/*------------------------START GAME BTN------------------*/
+.startbtn {
+  position: absolute;
+  z-index: 50;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  background-color: #fcf7f8;
+}
+.startbtn:hover{
+    color: #eb5e32;
+}
