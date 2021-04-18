@@ -163,8 +163,8 @@
   content: "";
   background: url(../images/pipe1.png) center top no-repeat;
   background-size: contain;
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   position: absolute;
   bottom: 0px;
   left: 50%;
@@ -173,9 +173,9 @@
 .wario {
   background: url(../images/wario1.png) center bottom no-repeat;
   position: absolute;
-  bottom: 150px;
-  width: 150px;
-  height: 150px;
+  bottom: 100px;
+  width: 100px;
+  height: 100px;
   background-size: 100%;
   left: 50%;
   transform: translate(-50%);
@@ -183,27 +183,26 @@
 .mario {
   background: url(../images/mario1.png) center bottom no-repeat;
   position: absolute;
-  bottom: 150px;
-  width: 150px;
-  height: 150px;
+  bottom: 80px;
+  width: 100px;
+  height: 100px;
   background-size: contain;
   left: 50%;
   transform: translate(-50%);
 }
-
-@media screen and (max-width: 900px) {
+@media screen and (max-height: 400px) {
   .wario {
-    height: 100px;
-    width: 100px;
-    bottom: 100px;
+    height: 75px;
+    width: 75px;
+    bottom: 75px;
   }
-  .mario{
-    height: 100px;
-    width: 100px;
-    bottom: 100px;
+  .mario {
+    height: 75px;
+    width: 75px;
+    bottom: 75px;
   }
   .pipe:after {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
   }
 }
