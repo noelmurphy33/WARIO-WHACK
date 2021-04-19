@@ -1,4 +1,20 @@
+
 $(document).ready(function () {
+  var firebaseConfig = {
+    apiKey: "AIzaSyCqwhqOG6JbkaEnFsYdrASaBG_qeQm0J_Y",
+    authDomain: "wario-whack.firebaseapp.com",
+    databaseURL: "https://wario-whack-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "wario-whack",
+    storageBucket: "wario-whack.appspot.com",
+    messagingSenderId: "656926517966",
+    appId: "1:656926517966:web:95b0935e71803179a13e9f",
+    measurementId: "G-3PWPPDRHBZ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  let db = firebase.firestore()
+  
   //function to toggle to how to play div
   $("#howtobtn").click(function () {
     $("#intro").hide("slow");
