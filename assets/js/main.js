@@ -44,6 +44,7 @@ $(document).ready(function () {
   const displaytimeleft = document.querySelector("#time");
   const displayscore = document.querySelector("#score");
   let lastPipe;
+  let timeUp = false;
   
   function selectRandomPipe(pipes) {
     const randomPipe = Math.floor(Math.random() * pipes.length);
@@ -54,8 +55,20 @@ $(document).ready(function () {
     lastPipe = pipe;
     return pipe;
   };
-console.log(selectRandomPipe(pipes))
+  console.log(selectRandomPipe(pipes))
 
+  function jumpOut(){
+    const jumpOutTime = Math.random() * 2000 + 600;
+    const warioUp = selectRandomPipe(pipes);
+    const marioUp = selectRandomPipe(pipes);
+    warioUp.classList.add("wariojump");
+    marioUp.classList.add("mariojump");
+    setTimeout(function(){
+        warioUp.classList.remove("wariojump");
+        marioUp.classList.remove("mariojump");
+    if(!timeUp) jumpOut();
+    }, jumpOutTime);
+   }
 
-
+  jumpOut();
 });
