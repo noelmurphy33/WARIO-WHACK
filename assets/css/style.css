@@ -234,6 +234,12 @@
     top: 100%;
 }
 
+.pipe.wariojump .wario{
+    top: auto;
+}
+.pipe.mariojump .mario{
+    top: auto;
+}
 @media screen and (max-height: 400px) {
     .wario {
         height: 75px;
