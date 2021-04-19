@@ -103,14 +103,20 @@ $(document).ready(function () {
     }, 1000);
   }
 
-  //increase score for hit wario
+  //increase score for hit wario and play sound
   function warioWhack(e) {
+    if(mutePlay.classList.contains("fa-volume-up")){
+      warioHit.play()
+    }
     score++;
     displayScore.textContent = score;
     this.parentElement.classList.remove("wariojump");
   }
-//decrease score for hit mario
+//decrease score for hit mario and play sound
   function marioWhack(e) {
+    if(mutePlay.classList.contains("fa-volume-up")){
+      marioHit.play()
+    }
     if(score <= 0){
       score = 0;
       displayScore.textContent = score;
@@ -119,6 +125,7 @@ $(document).ready(function () {
     displayScore.textContent = score;
     this.parentElement.classList.remove("mariojump");
   }
+  // toggle mute icon
   function music(){
     if(mutePlay.classList.contains("fa-volume-mute")){
     mutePlay.classList.remove("fa-volume-mute");
@@ -129,6 +136,7 @@ $(document).ready(function () {
     mutePlay.classList.add("fa-volume-mute");
   }
   }
+  //event listener
   mutePlay.addEventListener("click", music);
   wario.forEach(wario => wario.addEventListener("click", warioWhack));
   mario.forEach(mario => mario.addEventListener("click", marioWhack));
