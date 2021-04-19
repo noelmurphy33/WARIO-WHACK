@@ -72,6 +72,7 @@ $(document).ready(function () {
       if (!timeUp) jumpOut();
     }, jumpOutTime);
   }
+  //start the game
   function startGame() {
     countDown = timeLimit/1000;
     displayScore.textContent = 0;
@@ -101,7 +102,18 @@ $(document).ready(function () {
     displayScore.textContent = score;
     this.parentElement.classList.remove("wariojump");
   }
+//decrease score for hit mario
+  function marioWhack(e) {
+    if(score <= 0){
+      score = 0;
+      displayScore.textContent = score;
+    }else
+    score--;
+    displayScore.textContent = score;
+    this.parentElement.classList.remove("mariojump");
+  }
 
   wario.forEach(wario => wario.addEventListener("click", warioWhack));
+  mario.forEach(mario => mario.addEventListener("click", marioWhack));
   startGameBtn.addEventListener("click", startGame);
 });
