@@ -44,6 +44,7 @@ $(document).ready(function () {
   const startGameBtn = document.querySelector(".startbtn");
   const displayTimeLeft = document.querySelector("#time");
   const displayScore = document.querySelector("#score");
+  const replay = document.querySelector("#playagainbtn")
   let lastPipe;
   let timeUp = false;
   let score = 0;
@@ -136,7 +137,13 @@ $(document).ready(function () {
     mutePlay.classList.add("fa-volume-mute");
   }
   }
+// to play again
+  function playAgain(){
+    gameOver.style.display = "none"
+    startGame()
+  }
   //event listener
+  replay.addEventListener("click", playAgain)
   mutePlay.addEventListener("click", music);
   wario.forEach(wario => wario.addEventListener("click", warioWhack));
   mario.forEach(mario => mario.addEventListener("click", marioWhack));
