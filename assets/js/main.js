@@ -95,5 +95,13 @@ $(document).ready(function () {
     }, 1000);
   }
 
+  //increase score for hit wario
+  function warioWhack(e) {
+    score++;
+    displayScore.textContent = score;
+    this.parentElement.classList.remove("wariojump");
+  }
+
+  wario.forEach(wario => wario.addEventListener("click", warioWhack));
   startGameBtn.addEventListener("click", startGame);
 });
