@@ -40,11 +40,14 @@ $(document).ready(function () {
   const pipes = document.querySelectorAll(".pipe");
   const wario = document.querySelectorAll(".wario");
   const mario = document.querySelectorAll(".mario");
-  const startgame = document.querySelector(".startbtn");
-  const displaytimeleft = document.querySelector("#time");
-  const displayscore = document.querySelector("#score");
+  const startGame = document.querySelector(".startbtn");
+  const displayTimeLeft = document.querySelector("#time");
+  const displayScore = document.querySelector("#score");
   let lastPipe;
   let timeUp = false;
+  let score = 0;
+  let countDown 
+  let timeLimit = 60000
   
   function selectRandomPipe(pipes) {
     const randomPipe = Math.floor(Math.random() * pipes.length);
@@ -58,7 +61,7 @@ $(document).ready(function () {
   console.log(selectRandomPipe(pipes))
 
   function jumpOut(){
-    const jumpOutTime = Math.random() * 2000 + 600;
+    const jumpOutTime = Math.random() * 1200 + 600;
     const warioUp = selectRandomPipe(pipes);
     const marioUp = selectRandomPipe(pipes);
     warioUp.classList.add("wariojump");
@@ -69,6 +72,16 @@ $(document).ready(function () {
     if(!timeUp) jumpOut();
     }, jumpOutTime);
    }
-
-  jumpOut();
+ function startGame(){
+     countDown = 60;
+     displayScore.textContent = 0;
+     displayTimeLeft.textContent = countDown;
+     timeUp = false;
+     score = 0;
+     jumpOut();
+     setTimeout(function () {
+        timeUp = true;       
+      }, timeLimit);
+ }
+  
 });
