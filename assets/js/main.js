@@ -49,6 +49,11 @@ $(document).ready(function () {
   let score = 0;
   let countDown;
   let timeLimit = 60000;
+  //audio
+  const mutePlay = document.querySelector("#mutebtn")
+  const marioHit = new Audio("assets/audio/hitmario.mp3");
+  const warioHit = new Audio("assets/audio/hitwario.mp3");
+
 
   function selectRandomPipe(pipes) {
     const randomPipe = Math.floor(Math.random() * pipes.length);
@@ -114,7 +119,17 @@ $(document).ready(function () {
     displayScore.textContent = score;
     this.parentElement.classList.remove("mariojump");
   }
-
+  function music(){
+    if(mutePlay.classList.contains("fa-volume-mute")){
+    mutePlay.classList.remove("fa-volume-mute");
+    mutePlay.classList.add("fa-volume-up");
+  }
+    else{
+    mutePlay.classList.remove("fa-volume-up");
+    mutePlay.classList.add("fa-volume-mute");
+  }
+  }
+  mutePlay.addEventListener("click", music);
   wario.forEach(wario => wario.addEventListener("click", warioWhack));
   mario.forEach(mario => mario.addEventListener("click", marioWhack));
   startGameBtn.addEventListener("click", startGame);
