@@ -37,6 +37,7 @@ $(document).ready(function () {
   });
 
   //gameplay
+  const gameOver = document.querySelector(".gameover");
   const pipes = document.querySelectorAll(".pipe");
   const wario = document.querySelectorAll(".wario");
   const mario = document.querySelectorAll(".mario");
@@ -92,6 +93,7 @@ $(document).ready(function () {
       if (countDown < 1) {
           countDown = 0;
         clearInterval(countTimeDown);
+        gameOver.style.display = "block"
       }
     }, 1000);
   }
