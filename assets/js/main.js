@@ -46,9 +46,9 @@ $(document).ready(function () {
   let lastPipe;
   let timeUp = false;
   let score = 0;
-  let countDown 
-  let timeLimit = 60000
-  
+  let countDown;
+  let timeLimit = 60000;
+
   function selectRandomPipe(pipes) {
     const randomPipe = Math.floor(Math.random() * pipes.length);
     const pipe = pipes[randomPipe];
@@ -57,37 +57,43 @@ $(document).ready(function () {
     }
     lastPipe = pipe;
     return pipe;
-  };
-  console.log(selectRandomPipe(pipes))
+  }
+  console.log(selectRandomPipe(pipes));
 
-  function jumpOut(){
+  function jumpOut() {
     const jumpOutTime = Math.random() * 1200 + 600;
     const warioUp = selectRandomPipe(pipes);
     const marioUp = selectRandomPipe(pipes);
     warioUp.classList.add("wariojump");
     marioUp.classList.add("mariojump");
-    setTimeout(function(){
-        warioUp.classList.remove("wariojump");
-        marioUp.classList.remove("mariojump");
-    if(!timeUp) jumpOut();
+    setTimeout(function () {
+      warioUp.classList.remove("wariojump");
+      marioUp.classList.remove("mariojump");
+      if (!timeUp) jumpOut();
     }, jumpOutTime);
-   }
- function startGame(){
-     countDown = 60;
-     displayScore.textContent = 0;
-     displayTimeLeft.textContent = countDown;
-     timeUp = false;
-     score = 0;
-     jumpOut();
-     startGameBtn.style.display = "none";
-     setTimeout(function () {
-        timeUp = true;       
-      }, timeLimit);
- }
-  
+  }
+  function startGame() {
+    countDown = timeLimit/1000;
+    displayScore.textContent = 0;
+    displayTimeLeft.textContent = countDown;
+    timeUp = false;
+    score = 0;
+    jumpOut();
+    startGameBtn.style.display = "none";
+    setTimeout(function () {
+      timeUp = true;
+    }, timeLimit);
 
+    //count time left down
+    let countTimeDown = setInterval(() => {
+      countDown -= 1;
+      displayTimeLeft.textContent = countDown;
+      if (countDown < 1) {
+          countDown = 0;
+        clearInterval(countTimeDown);
+      }
+    }, 1000);
+  }
 
-
-
- startGameBtn.addEventListener('click', startGame)
+  startGameBtn.addEventListener("click", startGame);
 });
