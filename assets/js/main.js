@@ -40,7 +40,7 @@ $(document).ready(function () {
   const pipes = document.querySelectorAll(".pipe");
   const wario = document.querySelectorAll(".wario");
   const mario = document.querySelectorAll(".mario");
-  const startGame = document.querySelector(".startbtn");
+  const startGameBtn = document.querySelector(".startbtn");
   const displayTimeLeft = document.querySelector("#time");
   const displayScore = document.querySelector("#score");
   let lastPipe;
@@ -79,9 +79,15 @@ $(document).ready(function () {
      timeUp = false;
      score = 0;
      jumpOut();
+     startGameBtn.style.display = "none";
      setTimeout(function () {
         timeUp = true;       
       }, timeLimit);
  }
   
+
+
+
+
+ startGameBtn.addEventListener('click', startGame)
 });
