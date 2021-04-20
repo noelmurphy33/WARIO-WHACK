@@ -92,7 +92,10 @@ The wireframes were created using [Figma](https://www.figma.com)
 ### Existing Features
 - The site has two responsive pages the home page contains the info on the game such as the scoreboard, the intro, a contact form, and a section with instructions on how to play the game. Each of these items are toggled via the nav buttons, a large button under this content will then take you to the game page. The footer contains some links to sites about mario and also this repository.
 ![homepage](assets/images/contactsc.png)
-- The gameplay page consists of a game console on top which contains feedback to the player about score and time left aswell as a button to toggle the sound effects and a link to exit back to the home page. The game itself lasts 60s and the idea is to hit wario to increase your score.
+- The gameplay page consists of a game console on top which contains feedback to the player about score and time left aswell as a button to toggle the sound effects and a link to exit back to the home page. The game itself lasts 60s and the idea is to hit wario to increase your score. The game is started by the start button in the center of the screen.
+![gameplay](assets/images/stgameplay.png)
+- Once the game time is up you can enter your name and submit to get on the leader board, you can also choose to play agin which will reset the game or quit to home page via the buttons.
+![gameplayover](assets/images/gameoverscht.png)
 ### Features to be added
 - Add levels to the game which increase the difficulty.
 ## Technologies Used
