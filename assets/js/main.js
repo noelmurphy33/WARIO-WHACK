@@ -1,5 +1,5 @@
 $(document).ready(function () {
- // Your web app's Firebase configuration
+  // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   var firebaseConfig = {
     apiKey: "AIzaSyDpktDqa8vDLGMQ1CCcDvWXUr6iC-p-00U",
@@ -8,12 +8,11 @@ $(document).ready(function () {
     storageBucket: "wario-whack-e07f5.appspot.com",
     messagingSenderId: "512903200747",
     appId: "1:512903200747:web:c13eded61358dfd270e3ae",
-    measurementId: "G-YTSS9B5VH9"
+    measurementId: "G-YTSS9B5VH9",
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   var db = firebase.firestore();
- 
 
   //function to toggle to how to play div
   $("#howtobtn").click(function () {
@@ -156,80 +155,85 @@ $(document).ready(function () {
     startGame();
   }
   //////////
-  if(playerNameForm != null){
+  if (playerNameForm != null) {
     playerNameForm.addEventListener("submit", (event) => {
-      event.preventDefault(); 
-      saveScore();   
-      })
-    }
-
+      event.preventDefault();
+      saveScore();
+    });
+  }
 
   //emailjs
   const formOne = document.querySelector("#contactform");
-  if(formOne != null){
-  formOne.addEventListener("submit", (event) => {
-    event.preventDefault();
-    emailjs.sendForm("service_wn3bigg", "wario_email", formOne)
-    .then(function (response) {
-      document.querySelector("#contactsubmitbtn").innerHTML = `SENT`; 
-      document.querySelector("#contactsubmitbtn").style.color = "green";
-      formOne.reset()
-      },
-      function (error) {
-        document.querySelector("#contactsubmitbtn").innerHTML = `TRY AGAIN`; 
-      document.querySelector("#contactsubmitbtn").style.color = "red";
-      }
+  if (formOne != null) {
+    formOne.addEventListener("submit", (event) => {
+      event.preventDefault();
+      emailjs.sendForm("service_wn3bigg", "wario_email", formOne).then(
+        function (response) {
+          document.querySelector("#contactsubmitbtn").innerHTML = `SENT`;
+          document.querySelector("#contactsubmitbtn").style.color = "green";
+          formOne.reset();
+        },
+        function (error) {
+          document.querySelector("#contactsubmitbtn").innerHTML = `TRY AGAIN`;
+          document.querySelector("#contactsubmitbtn").style.color = "red";
+        }
+      );
+    });
+  }
 
-    );
-  });
-}
-
- /////////////
- function saveScore() {
-  // Get name from input box
-  let name = document.querySelector("#playername").value;
-  let score = displayScore.textContent;
-  // Make sure name has a value, if not send alert.
-  if(name !== "") {
+  /////////////
+  function saveScore() {
+    // Get name from input box
+    let name = document.querySelector("#playername").value;
+    let score = displayScore.textContent;
+    // Make sure name has a value, if not send alert.
+    if (name !== "") {
       // Add a new document in collection "scores"
-      db.collection("scores").doc().set({
+      db.collection("scores")
+        .doc()
+        .set({
           name: name,
-          score: score
-      })
-      .then(function() {
+          score: score,
+        })
+        .then(function () {
           console.log("Document successfully written!");
           updateScores();
-      })
-      .catch(function(error) {
+        })
+        .catch(function (error) {
           console.error("Error writing document: ", error);
-      });
-  } else {
-      alert('Please enter a name');
+        });
+    } else {
+      alert("Please enter a name");
+    }
   }
-}
+  //get data from firestore and add to score board
+  function updateScores() {
+    db.collection("scores")
+      .orderBy("score", "desc")
+      .limit(3)
+      .get()
+      .then((snapshot) => {
+        snapshot.forEach((doc) => {
+          document.getElementById("tablein").innerHTML +=
+            "<tr>" +
+            '<th class="number" scope="row">' +
+            "</th>" +
+            "<td>" +
+            doc.data().name +
+            "</td>" +
+            "<td>" +
+            doc.data().score +
+            "</td>" +
+            "</tr>";
+        });
+        let rank = document.querySelectorAll(".number");
+        rank[0].innerHTML = "1";
+        rank[1].innerHTML = "2";
+        rank[2].innerHTML = "3";
+      });
+  }
 
-function updateScores() {
-  // Clear current scores in our scoreboard
-  document.querySelector(".tablename").innerHTML = "";
-  document.querySelector(".tablescore").innerHTML = "";
-  // Get the top 5 scores from our scoreboard
-  db.collection("scores").orderBy("score", "desc").limit(3).get().then((snapshot) => {
-      snapshot.forEach((doc) => {
-        
-       let jim = Array.of(doc.data())
-       console.log(jim)
-        document.querySelector(".tablename").innerHTML = doc.data().name
-        document.querySelector(".tablescore").innerHTML = doc.data().score
-        document.querySelector(".tablenameb").innerHTML = doc.data().name
-        document.querySelector(".tablescoreb").innerHTML = doc.data().score
-        document.querySelector(".tablenamec").innerHTML = doc.data().name
-        document.querySelector(".tablescorec").innerHTML = doc.data().score
-          
-      })
-  })
-}
-updateScores();
-
+  updateScores();
 
   replay.addEventListener("click", playAgain);
   mutePlay.addEventListener("click", music);
