@@ -1,20 +1,20 @@
-
 $(document).ready(function () {
+ // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   var firebaseConfig = {
-    apiKey: "AIzaSyCqwhqOG6JbkaEnFsYdrASaBG_qeQm0J_Y",
-    authDomain: "wario-whack.firebaseapp.com",
-    databaseURL: "https://wario-whack-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "wario-whack",
-    storageBucket: "wario-whack.appspot.com",
-    messagingSenderId: "656926517966",
-    appId: "1:656926517966:web:95b0935e71803179a13e9f",
-    measurementId: "G-3PWPPDRHBZ"
+    apiKey: "AIzaSyDpktDqa8vDLGMQ1CCcDvWXUr6iC-p-00U",
+    authDomain: "wario-whack-e07f5.firebaseapp.com",
+    projectId: "wario-whack-e07f5",
+    storageBucket: "wario-whack-e07f5.appspot.com",
+    messagingSenderId: "512903200747",
+    appId: "1:512903200747:web:c13eded61358dfd270e3ae",
+    measurementId: "G-YTSS9B5VH9"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-  let db = firebase.firestore()
-  
+  var db = firebase.firestore();
+ 
+
   //function to toggle to how to play div
   $("#howtobtn").click(function () {
     $("#intro").hide("slow");
@@ -61,6 +61,7 @@ $(document).ready(function () {
   const displayTimeLeft = document.querySelector("#time");
   const displayScore = document.querySelector("#score");
   const replay = document.querySelector("#playagainbtn");
+  const playerNameForm = document.querySelector("#playerform");
   let lastPipe;
   let timeUp = false;
   let score = 0;
@@ -154,25 +155,82 @@ $(document).ready(function () {
     gameOver.style.display = "none";
     startGame();
   }
+  //////////
+  if(playerNameForm != null){
+    playerNameForm.addEventListener("submit", (event) => {
+      event.preventDefault(); 
+      saveScore();   
+      })
+    }
+
+
   //emailjs
-  const form = document.querySelector("#contactform");
-  form.addEventListener('submit', (event) => {
+  const formOne = document.querySelector("#contactform");
+  if(formOne != null){
+  formOne.addEventListener("submit", (event) => {
     event.preventDefault();
-    emailjs.sendForm("service_wn3bigg", "wario_email", form).then(
-      function () {
-        console.log("SUCCESS!");
+    emailjs.sendForm("service_wn3bigg", "wario_email", formOne)
+    .then(function (response) {
+      document.querySelector("#contactsubmitbtn").innerHTML = `SENT`; 
+      document.querySelector("#contactsubmitbtn").style.color = "green";
+      formOne.reset()
       },
       function (error) {
-        console.log("FAILED...", error);
+        document.querySelector("#contactsubmitbtn").innerHTML = `TRY AGAIN`; 
+      document.querySelector("#contactsubmitbtn").style.color = "red";
       }
-      )
-    })
 
-  
+    );
+  });
+}
 
-  
+ /////////////
+ function saveScore() {
+  // Get name from input box
+  let name = document.querySelector("#playername").value;
+  let score = displayScore.textContent;
+  // Make sure name has a value, if not send alert.
+  if(name !== "") {
+      // Add a new document in collection "scores"
+      db.collection("scores").doc().set({
+          name: name,
+          score: score
+      })
+      .then(function() {
+          console.log("Document successfully written!");
+          updateScores();
+      })
+      .catch(function(error) {
+          console.error("Error writing document: ", error);
+      });
+  } else {
+      alert('Please enter a name');
+  }
+}
 
-  //event listener
+function updateScores() {
+  // Clear current scores in our scoreboard
+  document.querySelector(".tablename").innerHTML = "";
+  document.querySelector(".tablescore").innerHTML = "";
+  // Get the top 5 scores from our scoreboard
+  db.collection("scores").orderBy("score", "desc").limit(3).get().then((snapshot) => {
+      snapshot.forEach((doc) => {
+        
+       let jim = Array.of(doc.data())
+       console.log(jim)
+        document.querySelector(".tablename").innerHTML = doc.data().name
+        document.querySelector(".tablescore").innerHTML = doc.data().score
+        document.querySelector(".tablenameb").innerHTML = doc.data().name
+        document.querySelector(".tablescoreb").innerHTML = doc.data().score
+        document.querySelector(".tablenamec").innerHTML = doc.data().name
+        document.querySelector(".tablescorec").innerHTML = doc.data().score
+          
+      })
+  })
+}
+updateScores();
+
+
   replay.addEventListener("click", playAgain);
   mutePlay.addEventListener("click", music);
   wario.forEach((wario) => wario.addEventListener("click", warioWhack));
