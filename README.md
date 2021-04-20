@@ -1,6 +1,6 @@
 # **WARIO WHACK**
 Wario Whack is a project i have created as part of my Full Stack Web Development course with Code Institute.
-
+[view live website here](https://noelmurphy33.github.io/WARIO-WHACK/index.html)
 
 ## Contents
 
