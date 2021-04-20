@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /*------------------------FONT STYLES COLORS------------------*/
 .yellowfont {
     color: #fbd000;
@@ -181,17 +188,23 @@
 /*------------------------GAME play STYLING------------------*/
 
 .gameplay {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     height: 85vh;
     width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     background: url(../images/gamebackground.jpg) no-repeat center;
     background-size: cover;
 }
 
 .pipe {
-    flex: 1 0 33.33%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 33.33%;
+            flex: 1 0 33.33%;
     position: relative;
     overflow: hidden;
 }
@@ -207,7 +220,9 @@
     position: absolute;
     bottom: 0px;
     left: 50%;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
 }
 
 .wario {
@@ -218,7 +233,11 @@
     height: 100px;
     background-size: 85%;
     left: 50%;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
 }
 
@@ -230,7 +249,11 @@
     height: 100px;
     background-size: contain;
     left: 50%;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
 }
 
@@ -296,7 +319,9 @@
     z-index: 50;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     border: 2px solid black;
     background-color: #fcf7f8;
 }
@@ -312,7 +337,9 @@
     z-index: 60;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     border: 1px solid black;
     border-radius: 5%;
     background-color: #fcf7f8;
