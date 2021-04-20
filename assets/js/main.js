@@ -70,7 +70,7 @@ $(document).ready(function () {
   const mutePlay = document.querySelector("#mutebtn");
   const marioHit = new Audio("assets/audio/hitmario.mp3");
   const warioHit = new Audio("assets/audio/hitwario.mp3");
-//function to select random pipes
+  //function to select random pipes
   function selectRandomPipe(pipes) {
     const randomPipe = Math.floor(Math.random() * pipes.length);
     const pipe = pipes[randomPipe];
@@ -80,7 +80,7 @@ $(document).ready(function () {
     lastPipe = pipe;
     return pipe;
   }
-///function to get mario and wario out of random pipes
+  ///function to get mario and wario out of random pipes
   function jumpOut() {
     const jumpOutTime = Math.random() * 1200 + 600;
     const warioUp = selectRandomPipe(pipes);
@@ -185,7 +185,7 @@ $(document).ready(function () {
   function saveScore() {
     // Get name from input box
     let name = document.querySelector("#playername").value;
-    let score = parseInt(displayScore.textContent)
+    let score = parseInt(displayScore.textContent);
     // Make sure name has a value, if not send alert.
     if (name !== "") {
       // Add a new document in collection "scores"
@@ -201,7 +201,6 @@ $(document).ready(function () {
           updateScores();
           document.querySelector("#playerror").style.display = "none";
           playerNameForm.reset();
-      
         });
     } else {
       document.querySelector("#playerror").innerHTML = "please fill in name";
@@ -234,7 +233,7 @@ $(document).ready(function () {
       });
   }
 
-  updateScores()
+  updateScores();
 
   replay.addEventListener("click", playAgain);
   mutePlay.addEventListener("click", music);
