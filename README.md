@@ -89,9 +89,12 @@ The wireframes were created using [Figma](https://www.figma.com)
 - I decided to add a footer to the home page with a few links as it made the page look better.
 - i decided to use solid black as it made the text and borders more defined.
 ## Features
-- The site has two pages the home page contains the info on the game such as the scoreboard, the intro, a contact form
 ### Existing Features
+- The site has two responsive pages the home page contains the info on the game such as the scoreboard, the intro, a contact form, and a section with instructions on how to play the game. Each of these items are toggled via the nav buttons, a large button under this content will then take you to the game page. The footer contains some links to sites about mario and also this repository.
+![homepage](assets/images/contactsc.png)
+- The gameplay page consists of a game console on top which contains feedback to the player about score and time left aswell as a button to toggle the sound effects and a link to exit back to the home page. The game itself lasts 60s and the idea is to hit wario to increase your score.
 ### Features to be added
+- Add levels to the game which increase the difficulty.
 ## Technologies Used
 ### Languages
 + [HTML](https://en.wikipedia.org/wiki/HTML) - Used as the main language for structuring the website.
