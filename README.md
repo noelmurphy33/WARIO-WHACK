@@ -92,9 +92,13 @@ The wireframes were created using [Figma](https://www.figma.com)
 ### Existing Features
 - The site has two responsive pages the home page contains the info on the game such as the scoreboard, the intro, a contact form, and a section with instructions on how to play the game. Each of these items are toggled via the nav buttons, a large button under this content will then take you to the game page. The footer contains some links to sites about mario and also this repository.
 ![homepage](assets/images/contactsc.png)
+![homepagecontact](assets/images/)
 - The gameplay page consists of a game console on top which contains feedback to the player about score and time left aswell as a button to toggle the sound effects and a link to exit back to the home page. The game itself lasts 60s and the idea is to hit wario to increase your score. The game is started by the start button in the center of the screen.
+
 ![gameplay](assets/images/stgameplay.png)
+
 - Once the game time is up you can enter your name and submit to get on the leader board, you can also choose to play agin which will reset the game or quit to home page via the buttons.
+
 ![gameplayover](assets/images/gameoverscht.png)
 ### Features to be added
 - Add levels to the game which increase the difficulty.
@@ -123,6 +127,69 @@ used to resize the images.
 - [jshint](https://jshint.com/)used to test my js
 - [Google Firebase](https://firebase.google.com/) used to store score data
 ## Testing
+### Code Validators
+
+I used [w3.org's validator](https://validator.w3.org/) for my HTML validation checks on both pages.
+
+- no errors or warnings
+
+I used [w3.org's validator](https://jigsaw.w3.org/css-validator/) for my CSS validation checks.
+
+- No errors were found.
+
+I used [JSHint](https://jshint.com) to check the javascript  no errors detected.
+
+![jshint](assets/images/jshint.png)
+
+### RESPONSIVENESS 
+To Check the responsiveness of the site I used [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) and various devices at my disposal. the site scales well on most devices however it is best to change to landscape playing the game on devices smaller then iphone 4.
+
+### Browser compatability
+ I tested the website on the following browsers
+ - Mircosoft edge
+ - Opera
+ - Google chrome
+ - Mozilla Firefox 
+ - Safari
+ No noticeable issues found
+
+ ### Testing User Stories
+   As a **user** i want to instructions how to play the game
+   - instructions giving on the home page.
+   As a **user** i want to be able to play the game on any device.
+   - the game is responsive and can be played on any device
+   As a **user** i want to compete with my friends playing the game.
+   - through the use of google firebase the data is stored from the leader board and updated continuously.  
+    As a **user** i want to be able to mute any audio on the site.
+   - The site is muted by defualt and is easy to unmute if one wishs  
+   As a **user** i want feedback on how im doing in the game.
+  - The feedback is provided by score and time displayed as well as sounds while unmuted.
+   As a **user** i want to be able to give feedback on the game.
+   - Feedback can be given via a contact form on the homepage which via emailjs will be sent to me.
+
+   As a **site owner** i want the user to have fun playing the game
+  - The game is fun to fun on any device
+   As a **site owner** i want a way to get feedback from the user
+  -  The contact form on the home page
+   As a **site owner** i want the site stucture to be simple for the user to navigate.
+   - The layout of the site is intuitive and the user can easily find any info they need.
+   As a **site owner** i want the game to be playable on any device.
+   - The game page is responsive and can be used on any device.
+  As a **site owner** i want the site to be attactive to make users want to return.
+  - The colors are bright and appealing images and animations make the site fun and attractive to users of any age.
+### Furter Testing
+In general i used the console in dev tools to find any issues i was having with my code.
+i also manually tested each feature as i implemented them.
+
+### BUGS
+- I had a few issus with implementing firebase to the project as the documentation is very intuitive.
+  the issue was mainly dealing with the data i retrieved from firestore so i ended up changing my table in html
+   and using js to create the scoreboard.
+
+- because i used two separate html pages for one js file i had to use if statements to remove certain null errors 
+which were stopping the gameplay.
+
+
 ## Deployment
 **GITHUB PAGES** 
 
@@ -160,3 +227,7 @@ To create a local clone follow these steps.
 - I relied alot on [Franks laboratory](http://frankslaboratory.co.uk/star-wars-whack-a-mole-javascript-game-tutorial-for-beginners/) for the game inception and functionallity. 
 
 - while implementing firebase i used [this](https://www.lucaslang.dev/blog/build-a-scoreboard-using-javascript-and-firebase-cloud-firestore/) site as a guide aswell as the firebase docs.
+
+
+## Acknowledgements
+i would like to thank my family and friend for their continuing support while making this project.
