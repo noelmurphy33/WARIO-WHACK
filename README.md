@@ -99,7 +99,7 @@ The wireframes were created using [Figma](https://www.figma.com)
 
 - Once the game time is up you can enter your name and submit to get on the leader board, you can also choose to play agin which will reset the game or quit to home page via the buttons.
 
-![gameplayover](assets/images/gameoverscht.png)
+![gameplayover](assets/images/gameoverscsht.png)
 ### Features to be added
 - Add levels to the game which increase the difficulty.
 ## Technologies Used
